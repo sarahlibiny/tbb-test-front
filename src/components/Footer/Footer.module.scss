@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid $lightGrey;
+  width: 100%;
+
+  span {
+    line-height: 20px;
+    color: $mediumGrey;
+    width: 30%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

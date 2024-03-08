@@ -1,0 +1,39 @@
+@import "../../variables.scss";
+
+.line {
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background-color: $blueHover;
+}
+
+.black {
+  background-color: $black;
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.red {
+  background-color: $red;
+}
+
+.lightGrey {
+  background-color: $lightGrey;
+}

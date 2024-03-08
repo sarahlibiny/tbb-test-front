@@ -1,0 +1,94 @@
+@import "../../variables.scss";
+
+.ContainerFlex {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  direction: ltr;
+
+  @media (max-width: 768px) {
+    text-align: start;
+  }
+}
+
+.ContainerFlexReversed {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  direction: rtl;
+
+  @media (max-width: 768px) {
+    text-align: flex-end;
+  }
+}
+
+.ContainerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5em;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    padding: 1em;
+  }
+
+  h2 {
+    font-size: 2.375rem;
+    font-weight: 400;
+    line-height: 50px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 38px;
+    font-weight: 300;
+  }
+
+  button {
+    border-radius: 37px;
+    padding: 15px;
+    width: 35%;
+    background: $white;
+    border: 1px solid $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      width: 60%;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.ImageContent {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ContainerFlex,
+  .ContainerFlexReversed {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+  }
+
+  .ContainerFlex > img,
+  .ContainerFlexReversed > img {
+    order: 1;
+  }
+
+  .ContainerFlex > div,
+  .ContainerFlexReversed > div {
+    order: 2;
+  }
+
+  .ImageContent {
+    width: 100%;
+  }
+}

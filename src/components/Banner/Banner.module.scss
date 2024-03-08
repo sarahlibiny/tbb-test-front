@@ -1,0 +1,73 @@
+@import "../../variables.scss";
+
+.banner {
+  width: 100%;
+}
+
+.Container {
+  background-color: $grey;
+  padding-top: 10em;
+
+  @media (max-width: 768px) {
+    padding-bottom: 1em;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    padding: 8em 0;
+
+    @media (max-width: 768px) {
+      padding: 5em 0;
+    }
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 400;
+    font-size: 5rem;
+    padding-left: 1.5em;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+  }
+
+  .ContainerTitleIcons {
+    display: flex;
+    gap: 106px;
+    padding-right: 2em;
+
+    @media (max-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .ContainerScroll {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3em 2em 1em 2em;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    span {
+      font-size: 1.25rem;
+      color: $white;
+    }
+  }
+}
