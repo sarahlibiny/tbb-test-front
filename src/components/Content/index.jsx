@@ -1,3 +1,4 @@
+import styles from "./Content.module.scss";
 import { TitleBeforeLine } from "../TitleBeforeLine";
 import Img1 from "../../assets/Img-1.png";
 import Arrow from "../../assets/arrow-right.svg";
@@ -15,12 +16,10 @@ import Img11 from "../../assets/Img-11.png";
 import Img12 from "../../assets/Img-12.png";
 import { Line } from "../Line";
 
-//small text imagem
-//refatorar
-
 export function Content() {
   return (
-    <section>
+    <section className={styles.Section}>
+      <h1>Welcome to the Play Matters Interactive Lookbook</h1>
       <TitleBeforeLine title="GIFTIN" />
       <Line color="orange" />
       <ContentItem
@@ -31,7 +30,9 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img1}
         imgAlt="A mother and sun playing with legos on the cellphone"
+        elementName="giftin"
       />
+      <div className={styles.Container}></div>
       <ContentItem
         direction="rtl"
         title="Gifts for Mom"
@@ -52,7 +53,9 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img3}
         imgAlt="An image of a lego"
+        elementName="travel"
       />
+      <div className={styles.Container}></div>
       <ContentItem
         direction="rtl"
         title="Fun accessories to take with you on your travels or keep kids entertained"
@@ -73,6 +76,7 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img5}
         imgAlt="A woman playing whith a sonic lego"
+        elementName="adults"
       />
       <Line color="blue" />
       <TitleBeforeLine title="ART & HOME DÉCOR" />
@@ -85,6 +89,7 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img6}
         imgAlt="A bouquet of lego flowers"
+        elementName="art"
       />
       <Line color="lightGrey" />
       <TitleBeforeLine title="SPACE" />
@@ -97,6 +102,7 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img7}
         imgAlt="An image of a lego"
+        elementName="space"
       />
       <Line color="black" />
       <TitleBeforeLine title="POP CULTURE" />
@@ -109,6 +115,7 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img8}
         imgAlt="A lego model"
+        elementName="pop"
       />
       <Line color="pink" />
       <TitleBeforeLine title="TODDLERS" />
@@ -121,7 +128,9 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img9}
         imgAlt="Father and baby playing in water with lego"
+        elementName="toddlers"
       />
+      <div className={styles.Container}></div>
       <ContentItem
         direction="rtl"
         title="xx TBD"
@@ -142,7 +151,9 @@ export function Content() {
         arrowImg={Arrow}
         imgSrc={Img11}
         imgAlt="A boy playing with his legos"
+        elementName="real"
       />
+      <div className={styles.Container}></div>
       <ContentItem
         direction="rtl"
         title="xxxxx TBD"

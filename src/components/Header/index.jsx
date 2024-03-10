@@ -6,8 +6,7 @@ import IconShoppingBag from "../../assets/icon-shoppingbag.svg";
 import IconSearch from "../../assets/icon-search.svg";
 import { useState } from "react";
 import { MenuCategories } from "../MenuCategories";
-
-//to do: implementacao do react scroll
+import { Link } from "react-scroll";
 
 export function Header() {
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
@@ -35,14 +34,86 @@ export function Header() {
             </div>
           </div>
           <ul>
-            <li>Giftin</li>
-            <li>Travel</li>
-            <li>Adults Welcome</li>
-            <li>Art & Home Décor</li>
-            <li>Space</li>
-            <li>Pop Culture</li>
-            <li>Toddlers</li>
-            <li>Real World Role Playing</li>
+            <Link
+              activeClass="active"
+              to="giftin"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Giftin
+            </Link>
+            <Link
+              activeClass="active"
+              to="travel"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Travel
+            </Link>
+            <Link
+              activeClass="active"
+              to="adults"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Adults Welcome
+            </Link>
+            <Link
+              activeClass="active"
+              to="art"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Art & Home Décor
+            </Link>
+            <Link
+              activeClass="active"
+              to="space"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Space
+            </Link>
+            <Link
+              activeClass="active"
+              to="pop"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Pop Culture
+            </Link>
+            <Link
+              activeClass="active"
+              to="toddlers"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Toddlers
+            </Link>
+            <Link
+              activeClass="active"
+              to="real"
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+            >
+              Real World Role Playing
+            </Link>
           </ul>
           <div className={styles.ContainerIconsSpans}>
             <div className={styles.ContainerMessage}>
@@ -72,7 +143,12 @@ export function Header() {
           </div>
         </nav>
       </header>
-      {isCategoriesOpen && <MenuCategories onClose={toggleCategories} />}
+      {isCategoriesOpen && (
+        <MenuCategories
+          onClose={toggleCategories}
+          isCategoriesOpen={isCategoriesOpen}
+        />
+      )}
     </>
   );
 }

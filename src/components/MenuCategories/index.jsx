@@ -1,4 +1,4 @@
-import styles from "./ManuCategories.module.scss";
+import styles from "./MenuCategories.module.scss";
 import IconMessage from "../../assets/icon-message.svg";
 import IconShoppingBag from "../../assets/icon-shoppingbag.svg";
 import IconSearch from "../../assets/icon-search.svg";
@@ -14,9 +14,7 @@ import Technic from "../../assets/technic.svg";
 import IconClose from "../../assets/icon-close.svg";
 import Lego from "../../assets/Icon-Lego.svg";
 
-//to do: efeitos menu
-
-export function MenuCategories({ onClose }) {
+export function MenuCategories({ onClose, isCategoriesOpen }) {
   const images = [
     { src: Architecture, alt: "Logo Architecture" },
     { src: City, alt: "Logo City" },
@@ -31,9 +29,10 @@ export function MenuCategories({ onClose }) {
 
   return (
     <div className={styles.ContainerMenu}>
+      {/*a classe era ContainerMenu apenas*/}
       <div className={styles.ContainerLeft}>
         <div className={styles.ContainerCloseMenu} onClick={onClose}>
-          <img src={Lego} alt="Logo Lego" />
+          <img className={styles.IconLego} src={Lego} alt="Logo Lego" />
           <img src={IconClose} alt="Icon Close" />
         </div>
         <div className={styles.ContainerIconsSpans}>
@@ -45,6 +44,7 @@ export function MenuCategories({ onClose }) {
             />
             <span>Contact us</span>
           </div>
+
           <div>
             <img
               className={styles.IconShoppingBag}

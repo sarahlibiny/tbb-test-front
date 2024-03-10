@@ -9,7 +9,7 @@
   position: absolute;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
@@ -28,14 +28,32 @@
     .ContainerCloseMenu {
       display: flex;
       padding-bottom: 5em;
-      gap: 30px;
+      gap: 20px;
       cursor: pointer;
+      align-items: center;
+
+      .IconLego {
+        width: 48px;
+        height: 48px;
+
+        @media (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
 
     .ContainerIconsSpans {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      cursor: pointer;
+
+      div {
+        &:hover {
+          background-color: $blueCategories;
+        }
+      }
     }
 
     div {
@@ -52,9 +70,13 @@
       flex-direction: column;
       gap: 20px;
       list-style: none;
+      cursor: pointer;
 
       li {
         font-size: 1.25rem;
+        &:hover {
+          background-color: $blueCategories;
+        }
       }
     }
 
@@ -85,5 +107,8 @@
     justify-content: center;
     align-items: center;
     border: 1px solid $lightGrey;
+    &:hover {
+      background-image: url("../../assets/Texture.png");
+    }
   }
 }
