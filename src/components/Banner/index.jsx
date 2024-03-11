@@ -6,9 +6,6 @@ import SoundButtonHover from "../../assets/icon-sound-hover.svg";
 import DownloadHover from "../../assets/download-hover.svg";
 import { useState } from "react";
 
-//to do: efeitos botoes
-//background video
-
 export function Banner() {
   const [isHover, setIsHover] = useState(false);
 

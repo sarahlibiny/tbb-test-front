@@ -1,9 +1,6 @@
 import { Element } from "react-scroll";
 import styles from "./ContentItem.module.scss";
 
-//to do: direcao botao
-//to do: espacamento imagens
-
 export function ContentItem({
   direction,
   title,
